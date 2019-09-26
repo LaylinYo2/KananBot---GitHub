@@ -1,6 +1,7 @@
 const {bot} = require("../app");
 const config = require("../config.json");
 const tokenfile = require("../token.json");
+const token = process.env.arcadia
 const Discord = require("discord.js");
 const fs = require("fs");
 bot.commands = new Discord.Collection();
