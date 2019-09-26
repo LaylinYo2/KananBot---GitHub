@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const Config = require("./config.json");
+const token = process.env.arcadia
 const fs = require("fs");
 
 const bot = new Discord.Client({disableEveryone: true});
