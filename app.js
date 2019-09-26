@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const Config = require("./config.json");
-const Token = require("./token.json");
 const fs = require("fs");
 
 const bot = new Discord.Client({disableEveryone: true});
@@ -18,4 +17,4 @@ y.addListener("data", res => {
   bot.channels.get("626046172062154765").send(x.join(" "));
 });
 
-bot.login(Token.token);
+bot.login(process.env.token);
