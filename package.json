@@ -1,0 +1,26 @@
+{
+  "name": "kanan",
+  "version": "2.0.0",
+  "description": "Custom bot owned by chara",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^3.1.0",
+    "bson": "^4.0.2",
+    "discord.js": "^11.5.1",
+    "kareem": "^2.3.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1",
+    "mongoose-legacy-pluralize": "^1.0.2",
+    "mpath": "^0.6.0",
+    "mquery": "^3.2.2",
+    "ms": "^2.1.2",
+    "request": "^2.88.0",
+    "superagent": "^5.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chara ♡#6064",
+  "license": "ISC"
+}
