@@ -14,7 +14,7 @@ module.exports = {
 let y = process.openStdin()
 y.addListener("data", res => {
   let x = res.toString().trim().split(/ +/g)
-  bot.channels.get("626046172062154765").send(x.join(" "));
+  bot.channels.get("375379540643545090").send(x.join(" "));
 });
 
 bot.login(process.env.token);
