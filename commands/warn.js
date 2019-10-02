@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
     //>warn @user <reason>
     if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Insufficient permission."); //if the user doesnt have manage roles perm
     let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]) //To find the target
-    if(!wUser) return message.reply("Couldn't find user | **Usage:** `>warn @user <reason>`") //Target wasnt specified lol
-    if(wUser.hasPermission("ADMINISTRATOR")) return message.reply(":clown: You tried. :clown:") //You cant warn someone with admin perm
+    if(!wUser) return message.channel.send("Couldn't find user | **Usage:** `>warn @user <reason>`") //Target wasnt specified lol
+    if(wUser.hasPermission("ADMINISTRATOR")) return message.channel.send(":clown: You tried. :clown:") //You cant warn someone with admin perm
     let reason = args.join(" ").slice(22); //warn reason
     if(!reason) return message.channel.send("Specify a reason | **Usage:** `>warn @user <reason>`"); //missing reason
 
