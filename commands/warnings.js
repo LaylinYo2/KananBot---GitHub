@@ -2,9 +2,10 @@ const Discord = require("discord.js");
 const config = require("../config.json");
 const fs = require("fs");
 const ms = require("ms");
-let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
+    
+    let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
     if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Insufficient permission.");
     let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
