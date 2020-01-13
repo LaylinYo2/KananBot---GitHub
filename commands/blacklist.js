@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send("Insufficient permission.");
     let blacklistUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!blacklistUser) return message.channel.send("Couldn't find user | **Usage:** `>blacklist @user <reason>`");
-    if(blacklistUser.hasPermission("ADMINISTRATOR")) return message.channel.send(":clown: You tried. :clown:");
+    if(blacklistUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":clown: You tried. :clown:");
     let blacklistReason = args.join(" ").slice(22);
     if(!blacklistReason) return message.channel.send("Specify a reason | **Usage:** `>blacklist @user <reason>`");
 
