@@ -5,6 +5,9 @@ const fs = require("fs");
 bot.commands = new Discord.Collection();
 
 bot.on("messageUpdate", (message, oldMessage, newMessage) => {
+  
+    let managerChannel = bot.channels.find(r => r.name === 'manager-room');
+    if(message.channel.name === 'manager-room') return;
 
   if(message.content.startsWith("https")) return;
   if(message.author.bot) return;
