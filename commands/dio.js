@@ -4,6 +4,8 @@ const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
     
+    if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("You are not worthy.")
+    
     if(!bot.lockit) bot.lockit = []
     let time = args.join(' ');
     let validUnlocks = ['end', 'timeout'];
